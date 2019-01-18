@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SlotMachine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div style="font-size:60px">MEGA TOP SUPER "TWO DIGIT" Slot Machine</div>
+        <br/>
+        <br/>
+        <div style="font-size:80px"><span id="num_one">1</span> <span id="num_two">2</span></div>
+        <button id="spin_btn" onclick="spinSlot()"> SPIN SLOT</button>
+        <br/>
+        <br/>
+        <div style="font-size:30px">Portafoglio <span id="cash">10</span></div>
+    </body>
+</html>
+
+<script>
+
+    function spinSlot() {
+        //pagaGettone
+        var gettoni = document.getElementById("cash").innerHTML;
+        gettoni = parseFloat(gettoni);
+        
+        if (gettoni===0){
+            alert("NON HAI ABBASTANZA SOLDI");
+        }
+        
+        else {
+        
+            gettoni = ((gettoni) - 1);
+        document.getElementById("cash").innerHTML = gettoni;
+        
+        //Crea due numeri randomici tra 0-9
+        var newNumber1 = Math.floor(Math.random() * 10);
+        var newNumber2 = Math.floor(Math.random() * 10);
+        //Recupera i vecchi dati e assicurati che siano numeri
+        var num1 = document.getElementById("num_one").innerHTML;
+        var num2 = document.getElementById("num_two").innerHTML;
+        //Assegna i nuovi valori alle variabili
+        num1 = newNumber1;
+        num2 = newNumber2;
+        //riporta i valori negli span
+        document.getElementById("num_one").innerHTML = num1;
+        document.getElementById("num_two").innerHTML = num2;
+
+
+        //Assegna Premi COPPIE
+        if (num1 === num2)
+        {
+            var gettoni = document.getElementById("cash").innerHTML;
+            gettoni = parseFloat(gettoni);
+            gettoni = ((gettoni) + 10);
+            document.getElementById("cash").innerHTML = gettoni;
+        }}
+        
+        
+       
+
+
+
+    }
+
+    function pagaGettone() {}
+    function spinMacchina() {}
+    function assegnaPunti() {}
+
+</script>

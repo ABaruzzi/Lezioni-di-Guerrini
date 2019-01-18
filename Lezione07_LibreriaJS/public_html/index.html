@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>LEZIONE SULLA LIBRERIA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/Libreria.js"></script>
+        <script src="JS/MyJS.js"></script>
+        <style>
+            input,table,th,td {border: 1px solid green; margin: 10px}
+            td {padding: 10px}
+
+
+        </style>
+    </head>
+    <body>
+        <br/>
+        <input style= "height: 30px; width:70px" id="valore" placeholder="Numero" type="number">
+        <input style= "height: 30px; width:70px" id="elevato" placeholder="Elevato a:" type="number">
+        <input style= "height: 35px; width:70px" type="button" value="CUBO" onclick="faiCubo()">
+        <table style= "width:60%">
+            <tr style="height: 50px">
+                <td id="risCubo" style= "width:33%">
+                    Nessun Numero Inserito
+                </td>
+            </tr>   
+        </table>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div >
+
+            <input style= "height: 30px" id="in_nome" placeholder="Inserisci Nome" type="text">
+            <input style= "height: 30px" id="in_voto" placeholder="Inserisci Voto" type="number">
+            <input style= "height: 35px; width:35px" type="button" value="+" onclick="aggiungiNome()">
+            <input style= "height: 35px; width:35px" type="button" value="+" onclick="aggiungiNomeLibreria()">
+            <input style= "height: 35px; width:35px" type="button" value="+" onclick="aggiungiNomeLista()">
+        </div>
+        <br/>
+        <table style= "width:60%">
+            <tr style="height: 50px">
+                <td id="listaNomi" style= "width:33%">
+                    Nessun Nome Inserito
+                </td>
+
+                <td id="listanomi2" style= "width:33%">
+                    Nessun Nome Inserito
+                </td>
+                <td id="listanomi3" style= "width:33%">
+                    Nessun Nome Inserito
+                </td>
+            </tr>   
+        </table>
+
+    </body>
+</html>
